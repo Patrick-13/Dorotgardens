@@ -28,7 +28,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, `png`] // ⚠️ Removed "avif"
+          formats: [`auto`, `webp`] // ⚠️ Removed "avif"
         },
       },
     },
