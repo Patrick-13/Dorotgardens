@@ -145,6 +145,7 @@ export default function About() {
       <section>
         <ImageGrid />
       </section>
+      
     </Layout>
   )
 }
