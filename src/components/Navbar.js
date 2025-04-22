@@ -34,8 +34,8 @@ export default function Navbar() {
             Blog
           </Link>
           <Link to="/about" className="no-underline text-gray-200">
-            About
-          </Link>
+            About Dorot Gardens
+          </Link> 
         </div>
 
         {/* Right: Find us + Search */}
