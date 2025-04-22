@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link to="/">
             <img
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="Dorot Gardens Logo"
               className="h-16 w-auto cursor-pointer"
             />

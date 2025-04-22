@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="max-w-md mx-auto md:mx-0 text-center md:text-left">
           <Link to="/">
             <img
-              src="../images/logo.webp"
+              src="../images/logo.png"
               alt="Dorot Gardens Logo"
               className="h-32 mb-6 mx-auto md:mx-0"
             />
