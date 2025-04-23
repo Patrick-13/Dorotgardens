@@ -8,35 +8,35 @@ import "swiper/css/effect-coverflow"
 const products = [
   {
     name: "Garlic",
-    image: "/images/garlic.png",
+    image: "/images/Garlic.png",
     description:
       "Ginger tastes great, but it can be hard work to cook with... there's often lots of peeling, chopping, and crushing involved - unless you use a Dorot Gardens Ginger cube, that is!",
     color: "#bf4e9d",
   },
   {
     name: "Parsley",
-    image: "/images/parsley.png",
+    image: "/images/Parsley.png",
     description:
       "Parsley - the most abundant herb in the world, no less - is high in nutrition, and brings a unique taste to any dish where it is involved.",
     color: "#81ac3f",
   },
   {
     name: "Dill",
-    image: "/images/dill.png",
+    image: "/images/Dill.png",
     description:
       "Dill is another member of the parsley family. As a result the two are often used in combination, and found together as part of many recipes - especially for vegetables and meats.",
     color: "#ebab1f",
   },
   {
     name: "Ginger",
-    image: "/images/ginger.png",
+    image: "/images/Ginger.png",
     description:
       "Ginger tastes great, but it can be hard work to cook with... there's often lots of peeling, chopping, and crushing involved - unless you use a Dorot Gardens Ginger cube, that is!",
     color: "#5ebbb0",
   },
   {
     name: "Basil",
-    image: "/images/basil.png",
+    image: "/images/Basil.png",
     description:
       "Ah, the king of herbs! You can add basil to almost any dish and take the flavor to the next level. Fish, pasta, soups and more can all benefit from having a basil cube or two in the mix!",
     color: "#bf2125",
