@@ -6,7 +6,7 @@ const stores = [
   { name: "Whole Foods", logo: "/images/wholefoods.png" },
   { name: "Trader Joe's", logo: "/images/traderjoes.png" },
   { name: "Wegmans", logo: "/images/wegmans.png" },
-  { name: "Albertsons", logo: "/images/albertsons.png" },
+  { name: "Albertsons", logo: "/images/Albertsons.png" },
   { name: "Wild Fork", logo: "/images/wildfork.png" },
   { name: "H-E-B", logo: "/images/heb.png" },
   { name: "ShopRite", logo: "/images/shoprite.png" },
