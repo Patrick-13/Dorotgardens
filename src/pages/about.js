@@ -7,12 +7,12 @@ import { motion } from "framer-motion"
 
 export default function About() {
   const products = [
-    { name: "Parsley", image: "/images/parsley.png" },
-    { name: "Dill", image: "/images/dill.png" },
-    { name: "Garlic", image: "/images/garlic.png" },
-    { name: "Ginger", image: "/images/ginger.png" },
-    { name: "Basil", image: "/images/basil.png" },
-    { name: "Cilantro", image: "/images/cilantro.png" },
+    { name: "Parsley", image: "/images/Parsley.png" },
+    { name: "Dill", image: "/images/Dill.png" },
+    { name: "Garlic", image: "/images/Garlic.png" },
+    { name: "Ginger", image: "/images/Ginger.png" },
+    { name: "Basil", image: "/images/Basil.png" },
+    { name: "Cilantro", image: "/images/Cilantro.png" },
     { name: "Onions", image: "/images/onions.png" },
   ]
 
