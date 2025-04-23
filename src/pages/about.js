@@ -3,10 +3,62 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageGrid from "../components/Imagegrids"
 import Productcarousel from "../components/Productcarousel"
+import { motion } from "framer-motion"
 
 export default function About() {
+  const products = [
+    { name: "Parsley", image: "/images/parsley.png" },
+    { name: "Dill", image: "/images/dill.png" },
+    { name: "Garlic", image: "/images/garlic.png" },
+    { name: "Ginger", image: "/images/ginger.png" },
+    { name: "Basil", image: "/images/basil.png" },
+    { name: "Cilantro", image: "/images/cilantro.png" },
+    { name: "Onions", image: "/images/onions.png" },
+  ]
+
   return (
     <Layout>
+      <section>
+        <div className="relative h-screen text-white overflow-hidden">
+          <img
+            src="/images/mobile_banner.png"
+            alt="Mobile Banner"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+            <img
+              src="/images/logo.png"
+              alt="Dorot Gardens"
+              className="mb-6 w-60"
+            />
+
+            <h1 className="text-3xl sm:text-4xl font-extrabold">
+              <span className="px-2 py-1 rounded">
+                Same high quality freshness.
+              </span><br />
+              <span className="px-2 py-1 rounded">Brand new look.</span>
+            </h1>
+           
+          </div>
+
+          {/* Scrolling product bar */}
+          <motion.div
+            className="absolute bottom-0 w-full flex gap-16 py-6 px-8"
+            animate={{ x: ["100%", "-100%"] }}
+            transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+          >
+            {products.concat(products).map((product, index) => (
+              <img
+                key={index}
+                src={product.image}
+                alt={product.name}
+                className="h-28 object-contain transition-transform duration-300 hover:scale-110"
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Top Left - Image */}
@@ -127,18 +179,33 @@ export default function About() {
           </div>
           <div className="p-10 flex flex-col justify-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-extrabold">Our plans for the years to come…</h1>
+              <h1 className="text-3xl font-extrabold">
+                Our plans for the years to come…
+              </h1>
             </div>
             <p className="text-lg font-bold">
-            Dorot Gardens is committed to constant innovation through keeping a close eye on the market and listening to its needs. Our pre-portioned packaging is a great example of this.
+              Dorot Gardens is committed to constant innovation through keeping
+              a close eye on the market and listening to its needs. Our
+              pre-portioned packaging is a great example of this.
             </p>
             <p className="text-lg font-bold">
-            For us, in Dorot, this spells innovation, and this innovative spirit keeps on opening doors to new markets – as evidenced by the fact that in most parts of the world, Dorot Gardens’ frozen seasoning products introduce into the market a young, sometimes totally new, category. The combination of freshness and great taste together with the convenience and availability is a surefire win, which without doubt has proved itself, and will surely go on doing so in the future.
+              For us, in Dorot, this spells innovation, and this innovative
+              spirit keeps on opening doors to new markets – as evidenced by the
+              fact that in most parts of the world, Dorot Gardens’ frozen
+              seasoning products introduce into the market a young, sometimes
+              totally new, category. The combination of freshness and great
+              taste together with the convenience and availability is a surefire
+              win, which without doubt has proved itself, and will surely go on
+              doing so in the future.
             </p>
             <p className="text-lg font-bold">
-            The company is also positive that it owes its success to this commitment and the strict strategic planning that goes with that commitment. This is why we have invested in a future enlargement of our production facilities – such an expansion will allow us to increase production power even further, and realize the growth potential that we anticipate in the coming years.
+              The company is also positive that it owes its success to this
+              commitment and the strict strategic planning that goes with that
+              commitment. This is why we have invested in a future enlargement
+              of our production facilities – such an expansion will allow us to
+              increase production power even further, and realize the growth
+              potential that we anticipate in the coming years.
             </p>
-         
           </div>
         </div>
       </section>
@@ -149,7 +216,6 @@ export default function About() {
       <section>
         <Productcarousel />
       </section>
-      
     </Layout>
   )
 }

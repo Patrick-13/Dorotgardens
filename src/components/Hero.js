@@ -37,12 +37,11 @@ export default function Hero() {
     const interval = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % slides.length)
     }, 5000)
-
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <div className="relative h-[70vh] w-full overflow-hidden">
+    <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -55,16 +54,20 @@ export default function Hero() {
             alt="Slide background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-start px-14 md:px-20 pt-20 md:pt-32">
-            <div className="text-white text-left max-w-md space-y-6 ml-8 md:ml-24">
-              <p className="font-extrabold  text-3xl md:text-2xl  opacity-80">
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-start px-6 sm:px-10 md:px-20 lg:px-32">
+            <div className="text-white max-w-xl space-y-4 sm:space-y-6">
+              <p className="text-lg sm:text-xl md:text-2xl font-bold opacity-80">
                 {slide.topText}
               </p>
-              <div className="text-9xl md:text-9xl font-extrabold leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
                 {slide.mainLines}
-              </div>
-              <p className="text-3xl md:text-xl">{slide.description}</p>
-              <button className="mb-12 text-2xl font-bold py-6 px-24 bg-[#c178b4] hover:bg-[#d38ec0] rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.4)] hover:opacity-90 transition self-center">
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl">
+                {slide.description}
+              </p>
+              <button className="mt-4 sm:mt-6 text-sm sm:text-lg md:text-xl font-bold py-3 sm:py-4 px-6 sm:px-10 bg-[#c178b4] hover:bg-[#d38ec0] rounded-full shadow-lg transition-all">
                 Learn More
               </button>
             </div>
@@ -73,12 +76,12 @@ export default function Hero() {
       ))}
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentSlide(i)}
-            className={`h-4 w-4 rounded-full transition-all duration-300 ${
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
               i === currentSlide
                 ? "bg-white"
                 : "bg-white bg-opacity-40 hover:bg-opacity-80"

@@ -15,7 +15,7 @@ const stores = [
 export default function StoreList() {
   return (
     <div className="bg-ultraviolet py-12 px-4 text-white text-center w-full">
-      <p className="mb-6 font-bold text-lichepurple text-2xl max-w-3xl mx-auto">
+      <p className="mb-6 font-bold text-lichepurple text-2xl max-w-xl mx-auto">
         Find the Dorot Gardens range at the freezer aisle at your local grocery,
         including these amazing stores:
       </p>
@@ -34,7 +34,7 @@ export default function StoreList() {
       </div>
 
       <div className="mt-8 flex justify-center">
-        <button className="bg-[#70005a] hover:bg-[#8f2074] px-16 py-4 rounded-full font-bold shadow-lg  text-white text-2xl flex items-center transition">
+        <button className="bg-[#70005a] hover:bg-[#8f2074] px-16 py-4 rounded-full font-bold shadow-lg  text-white text-xl flex items-center transition">
           <IoLocationOutline className="mr-2" size={24} />
           <span>Find The Nearest Store</span>
         </button>

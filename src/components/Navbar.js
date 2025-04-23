@@ -20,7 +20,7 @@ export default function Navbar() {
         </div>
 
         {/* Center Nav Links */}
-        <div className="hidden md:flex justify-center space-x-10 font-extrabold text-xl">
+        <div className="hidden md:flex justify-center space-x-10 font-bold text-md">
           <Link to="/product" className="no-underline text-gray-200">
             Products
           </Link>

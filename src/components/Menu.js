@@ -13,16 +13,16 @@ const Menu = () => {
   return (
     <div className="bg-orchid py-12 px-4 text-center min-h-screen">
       <h2 className="text-white mb-8">
-        <span className="text-white text-2xl font-bold mb-8">
+        <span className="text-white text-xl font-bold mb-8">
           Explore our recipes and discover your new favorite dishes & flavor
           combinations!
         </span>
         <br />
-        <span className="text-white text-5xl font-extrabold">
+        <span className="text-white text-2xl font-extrabold">
           Find Inspiration For Your Next
         </span>{" "}
         <br />
-        <span className="text-white text-5xl font-extrabold">
+        <span className="text-white text-2xl font-extrabold">
           Culinary Masterpiece
         </span>
       </h2>
@@ -45,7 +45,7 @@ const Menu = () => {
         ))}
       </div>
 
-      <button className="mt-6 bg-[#70005a] text-white text-2xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
+      <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
         Browse More Recipes
       </button>
     </div>
