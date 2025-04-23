@@ -172,7 +172,7 @@ const Productcarousel = () => {
 
       {/* View All Products Button */}
       <div className="mb-6">
-        <button className="mt-6 bg-[#70005a] text-white text-xl sm:text-2xl lg:text-3xl px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-6 rounded-full font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition w-full sm:w-auto">
+      <button className="mt-6 bg-[#70005a] text-white text-2xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
           View All Products
         </button>
       </div>
