@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageGrid from "../components/Imagegrids"
+import Productcarousel from "../components/Productcarousel"
 
 export default function About() {
   return (
@@ -144,6 +145,9 @@ export default function About() {
 
       <section>
         <ImageGrid />
+      </section>
+      <section>
+        <Productcarousel />
       </section>
       
     </Layout>
