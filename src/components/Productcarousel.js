@@ -58,7 +58,7 @@ const products = [
 ]
 
 const Productcarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
     <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
@@ -98,7 +98,7 @@ const Productcarousel = () => {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -109,21 +109,31 @@ const Productcarousel = () => {
         className="w-full max-w-[90rem] relative"
       >
         {products.map((product, index) => {
-          const isActive = index === activeIndex;
+          const isActive = index === activeIndex
           return (
             <SwiperSlide
               key={index}
               className="transition-all duration-500 flex justify-center items-center"
             >
               {isActive ? (
-                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-6 flex flex-col justify-between h-[40rem] sm:h-[45rem] lg:h-[50rem] w-[25rem] sm:w-[28rem] lg:w-[32rem] shadow-xl">
+                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-6 flex flex-col h-[80vh] w-[25rem] sm:w-[28rem] lg:w-[32rem] shadow-xl">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="mx-auto mb-4 h-72 sm:h-80 lg:h-96 object-contain"
+                    className="mx-auto mb-4 h-56 sm:h-64 lg:h-72 object-contain"
                   />
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-2">{product.name}</h3>
-                  <p className="text-lg sm:text-xl lg:text-2xl text-center leading-snug mb-6">{product.description}</p>
+
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-2">
+                    {product.name}
+                  </h3>
+
+                  {/* Wrap the description in a scrollable container */}
+                  <div className="overflow-y-auto max-h-[10rem] mb-6">
+                    <p className="text-base sm:text-lg lg:text-xl text-center leading-snug">
+                      {product.description}
+                    </p>
+                  </div>
+
                   <button
                     className="text-xl sm:text-2xl lg:text-3xl font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition self-center"
                     style={{ backgroundColor: product.color }}
@@ -139,7 +149,7 @@ const Productcarousel = () => {
                 />
               )}
             </SwiperSlide>
-          );
+          )
         })}
 
         {/* Swiper Navigation Buttons */}
@@ -154,6 +164,6 @@ const Productcarousel = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 export default Productcarousel
