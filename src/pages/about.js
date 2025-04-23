@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageGrid from "../components/Imagegrids"
-import Productcarousel from "../components/Productcarousel"
+import Aboutproductcarousel from "../components/Aboutproductcarousel"
 import { motion } from "framer-motion"
 
 export default function About() {
@@ -214,7 +214,7 @@ export default function About() {
         <ImageGrid />
       </section>
       <section>
-        <Productcarousel />
+        <Aboutproductcarousel />
       </section>
     </Layout>
   )
