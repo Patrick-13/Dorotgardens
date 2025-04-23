@@ -91,7 +91,6 @@ const Productcarousel = () => {
         modules={[EffectCoverflow, Navigation]}
         effect="coverflow"
         centeredSlides
-        slidesPerView={3}
         loop
         grabCursor
         navigation={{
@@ -105,6 +104,20 @@ const Productcarousel = () => {
           depth: 200,
           modifier: 1.8,
           slideShadows: false,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1.2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
         }}
         className="w-full max-w-[90rem] relative"
       >
@@ -158,8 +171,8 @@ const Productcarousel = () => {
       </Swiper>
 
       {/* View All Products Button */}
-      <div className="z-10 mt-10">
-        <button className="bg-[#70005a] text-white text-xl sm:text-2xl lg:text-3xl px-12 py-4 rounded-full font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
+      <div className="mb-6">
+        <button className="mt-6 bg-[#70005a] text-white text-xl sm:text-2xl lg:text-3xl px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-6 rounded-full font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition w-full sm:w-auto">
           View All Products
         </button>
       </div>
