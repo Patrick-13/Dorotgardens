@@ -115,19 +115,12 @@ const Productcarousel = () => {
               className="transition-all duration-500 flex justify-center items-center"
             >
               {isActive ? (
-                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-6 flex flex-col h-[80vh] w-[25rem] sm:w-[28rem] lg:w-[32rem] shadow-xl">
+                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-2 shadow-xl flex items-center justify-center">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="mx-auto mb-4 h-56 sm:h-64 lg:h-72 object-contain"
+                    className="object-contain max-h-[22rem] w-auto"
                   />
-
-                  <button
-                    className="text-xl sm:text-2xl lg:text-xl font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition self-center"
-                    style={{ backgroundColor: product.color }}
-                  >
-                    Learn More
-                  </button>
                 </div>
               ) : (
                 <img
@@ -147,7 +140,7 @@ const Productcarousel = () => {
 
       {/* View All Products Button */}
       <div className="mb-6">
-      <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
+        <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
           View All Products
         </button>
       </div>

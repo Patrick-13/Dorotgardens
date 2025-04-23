@@ -133,7 +133,7 @@ const Productcarousel = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="mx-auto mb-4 h-56 sm:h-64 lg:h-72 object-contain"
+                    className="mx-auto mb-4 h-56- sm:h-64 lg:h-72 object-contain"
                   />
 
                   <h3 className="text-xl sm:text-sm lg:text-2xl font-bold text-center mb-2">
