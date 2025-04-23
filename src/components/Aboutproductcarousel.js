@@ -47,21 +47,24 @@ const Productcarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
-      {/* Petals */}
+    <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-gradient-to-b from-orchiddark to-[#ca95c2]">
+      {/* Split Background */}
+
+      {/* Petals / Decorations */}
       <img
         src="/images/pink-top-right.webp"
         alt="petals"
-        className="absolute top-0 right-0 w-[20rem] sm:w-[30rem] opacity-80 pointer-events-none"
+        className="hidden lg:block absolute top-0 right-0 w-[30rem] opacity-80 pointer-events-none z-10"
       />
+
       <img
         src="/images/pink-bottom-left.webp"
         alt="petals"
-        className="absolute bottom-[-1.5rem] left-0 w-[20rem] sm:w-[30rem] opacity-80 pointer-events-none"
+        className="hidden lg:block absolute bottom-[-1.5rem] left-0 w-[30rem] opacity-80 pointer-events-none z-10"
       />
 
-      {/* Headlines */}
-      <div className="z-10 text-center m-20 mb-6 px-6 sm:px-12">
+      {/* Content */}
+      <div className="z-10 text-center mt-20 px-6 sm:px-12">
         <h2 className="text-[#740464] font-bold text-xl sm:text-xl mb-2">
           fresh new look
         </h2>
@@ -71,7 +74,6 @@ const Productcarousel = () => {
           From Our Farm To Your Freezer
         </h2>
       </div>
-
       {/* Swiper Carousel */}
       <Swiper
         modules={[EffectCoverflow, Navigation]}
@@ -105,7 +107,7 @@ const Productcarousel = () => {
             slidesPerView: 3,
           },
         }}
-        className="w-full max-w-[90rem] relative"
+        className="w-full max-w-[90rem] relative z-20"
       >
         {products.map((product, index) => {
           const isActive = index === activeIndex
@@ -115,7 +117,7 @@ const Productcarousel = () => {
               className="transition-all duration-500 flex justify-center items-center"
             >
               {isActive ? (
-                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-2 shadow-xl flex items-center justify-center">
+                <div className="text-white rounded-xl overflow-hidden p-2 flex items-center justify-center">
                   <img
                     src={product.image}
                     alt={product.name}

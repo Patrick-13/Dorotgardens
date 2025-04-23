@@ -36,10 +36,10 @@ export default function About() {
             <h1 className="text-3xl sm:text-4xl font-extrabold">
               <span className="px-2 py-1 rounded">
                 Same high quality freshness.
-              </span><br />
+              </span>
+              <br />
               <span className="px-2 py-1 rounded">Brand new look.</span>
             </h1>
-           
           </div>
 
           {/* Scrolling product bar */}
@@ -159,11 +159,17 @@ export default function About() {
           </h2>
 
           <div className="flex justify-center">
-            <img
-              src="/images/timeline.webp"
-              alt="Dorot Gardens Story Timeline"
-              className="w-full max-w-4xl h-auto"
-            />
+            <picture>
+              <source
+                srcSet="/images/timeline_mobile.png"
+                media="(max-width: 640px)"
+              />
+              <img
+                src="/images/timeline.webp"
+                alt="Dorot Gardens Story Timeline"
+                className="w-full max-w-4xl h-auto"
+              />
+            </picture>
           </div>
         </div>
       </section>

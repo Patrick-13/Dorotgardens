@@ -66,14 +66,15 @@ const Productcarousel = () => {
       <img
         src="/images/pink-top-right.webp"
         alt="petals"
-        className="absolute top-0 right-0 w-[20rem] sm:w-[30rem] opacity-80 pointer-events-none"
+        className="hidden lg:block absolute top-0 right-0 w-[30rem] opacity-80 pointer-events-none z-10"
       />
+
       <img
         src="/images/pink-bottom-left.webp"
         alt="petals"
-        className="absolute bottom-[-1.5rem] left-0 w-[20rem] sm:w-[30rem] opacity-80 pointer-events-none"
+        className="hidden lg:block absolute bottom-[-1.5rem] left-0 w-[30rem] opacity-80 pointer-events-none z-10"
       />
-
+      
       {/* Headlines */}
       <div className="z-10 text-center m-20 mb-6 px-6 sm:px-12">
         <h2 className="text-[#740464] font-bold text-xl sm:text-xl mb-2">
@@ -172,7 +173,7 @@ const Productcarousel = () => {
 
       {/* View All Products Button */}
       <div className="mb-6">
-      <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
+        <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
           View All Products
         </button>
       </div>
