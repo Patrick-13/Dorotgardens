@@ -50,7 +50,7 @@ const products = [
   },
   {
     name: "Sauteed glazed Onions",
-    image: "/images/onions.png",
+    image: "/images/onion.avif",
     description:
       "Sauteed onions give an instantly-recognizable sweetness to any recipe that calls for them - and with Dorot Gardens you can get that sweetness with none of the prep time (or tears)!",
     color: "#e16184",
@@ -74,13 +74,13 @@ const Productcarousel = () => {
         alt="petals"
         className="hidden lg:block absolute bottom-[-1.5rem] left-0 w-[30rem] opacity-80 pointer-events-none z-10"
       />
-      
+
       {/* Headlines */}
       <div className="z-10 text-center m-20 mb-6 px-6 sm:px-12">
         <h2 className="text-[#740464] font-bold text-xl sm:text-xl mb-2">
           fresh new look
         </h2>
-        <h2 className="text-white font-extrabold text-2xl sm:text-2xl mb-4 leading-snug">
+        <h2 className="text-white font-extrabold capitalize font-gelica text-2xl sm:text-2xl mb-4 leading-snug">
           Always Fresh Herbs.
           <br />
           From Our Farm To Your Freezer
@@ -88,92 +88,99 @@ const Productcarousel = () => {
       </div>
 
       {/* Swiper Carousel */}
-      <Swiper
-        modules={[EffectCoverflow, Navigation]}
-        effect="coverflow"
-        centeredSlides
-        loop
-        grabCursor
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 200,
-          modifier: 1.8,
-          slideShadows: false,
-        }}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 1.2,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-        className="w-full max-w-[90rem] relative"
-      >
-        {products.map((product, index) => {
-          const isActive = index === activeIndex
-          return (
-            <SwiperSlide
-              key={index}
-              className="transition-all duration-500 flex justify-center items-center"
-            >
-              {isActive ? (
-                <div className="bg-[#70005a] text-white rounded-xl overflow-hidden p-6 flex flex-col h-[80vh] w-[25rem] sm:w-[28rem] lg:w-[32rem] shadow-xl">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="mx-auto mb-4 h-56- sm:h-64 lg:h-72 object-contain"
-                  />
+      <div className="relative z-10 w-full mt-10 max-w-6xl">
+        <Swiper
+          modules={[EffectCoverflow, Navigation]}
+          effect="coverflow"
+          centeredSlides
+          loop
+          grabCursor
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 40,
+            depth: 200,
+            modifier: 1.8,
+            slideShadows: false,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 1.2,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          className="w-full max-w-[90rem] relative"
+        >
+          {products.map((product, index) => {
+            const isActive = index === activeIndex
+            return (
+              <SwiperSlide
+                key={index}
+                className="transition-all duration-500 flex justify-center items-center"
+              >
+                <div className="flex justify-center items-start h-[32rem] relative">
+                  {" "}
+                  {/* Fixed height */}
+                  {isActive ? (
+                    <div className="relative flex flex-col items-center w-full">
+                      {/* Floating image */}
+                      <div className="relative z-20 -mb-52">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-80 h-auto object-contain drop-shadow-2xl"
+                        />
+                      </div>
 
-                  <h3 className="text-xl sm:text-sm lg:text-2xl font-bold text-center mb-2">
-                    {product.name}
-                  </h3>
-
-                  {/* Wrap the description in a scrollable container */}
-                  <div className="overflow-y-auto max-h-[10rem] mb-6">
-                    <p className="text-base sm:text-lg lg:text-xl text-center leading-snug">
-                      {product.description}
-                    </p>
-                  </div>
-
-                  <button
-                    className="text-xl sm:text-2xl lg:text-xl font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition self-center"
-                    style={{ backgroundColor: product.color }}
-                  >
-                    Learn More
-                  </button>
+                      {/* Card */}
+                      <div className="relative z-10 bg-orchiddark text-white text-center p-4 pt-60 rounded-2xl shadow-lg w-72 sm:w-[18rem]">
+                        <h3 className="text-xl font-bold mb-2">
+                          {product.name}
+                        </h3>
+                        <p className="text-sm leading-snug max-h-[7rem] overflow-y-auto">
+                          {product.description}
+                        </p>
+                        <button
+                          className="mt-4 px-5 py-2 text-white font-semibold rounded-full transition-all hover:opacity-90"
+                          style={{ backgroundColor: product.color }}
+                        >
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-[18rem] sm:h-[20rem] lg:h-[22rem] object-contain scale-85 transition-transform duration-500"
+                    />
+                  )}
                 </div>
-              ) : (
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-[18rem] sm:h-[20rem] lg:h-[22rem] object-contain opacity-70 scale-90 transition-transform duration-500"
-                />
-              )}
-            </SwiperSlide>
-          )
-        })}
+              </SwiperSlide>
+            )
+          })}
 
-        {/* Swiper Navigation Buttons */}
-        <div className="swiper-button-prev !text-white !left-0 !z-50"></div>
-        <div className="swiper-button-next !text-white !right-0 !z-50"></div>
-      </Swiper>
-
+          {/* Swiper Navigation Buttons */}
+          <div className="swiper-button-prev !text-white !left-0 !z-50"></div>
+          <div className="swiper-button-next !text-white !right-0 !z-50"></div>
+        </Swiper>
+      </div>
       {/* View All Products Button */}
-      <div className="mb-6">
-        <button className="mt-6 bg-[#70005a] text-white text-xl px-16 py-4 rounded-full  font-bold shadow-lg hover:bg-[#8f2074] hover:opacity-90 transition">
+
+      <div className="relative z-10 mt-16 mb-16">
+        <button className="px-8 py-3 bg-orchiddark text-white rounded-full text-lg font-semibold shadow-md hover:bg-orchiddark">
           View All Products
         </button>
       </div>

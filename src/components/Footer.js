@@ -23,7 +23,7 @@ export default function Footer() {
               className="h-32 mb-6 mx-auto md:mx-0"
             />
           </Link>
-          <p className="text-lg leading-relaxed">
+          <p className="text-md leading-relaxed">
             Our flash-frozen pre-portioned garlic, onions, and herb packs give
             you all the flavor of fresh ingredients without the pesky chopping
             and measuring.
@@ -33,8 +33,8 @@ export default function Footer() {
         {/* Quick Links & Contact */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center sm:text-left">
           <div>
-            <h4 className="font-extrabold text-2xl mb-3">Quick Links</h4>
-            <ul className="space-y-1 text-base font-bold">
+            <h4 className="font-extrabold text-lg mb-3">Quick Links</h4>
+            <ul className="space-y-1 text-sm font-bold">
               {[
                 "Products",
                 "Recipes",
@@ -54,8 +54,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-extrabold text-2xl mb-3">Contact Us</h4>
-            <ul className="space-y-2 text-base">
+            <h4 className="font-extrabold text-lg mb-3">Contact Us</h4>
+            <ul className="space-y-2 text-sm">
               <li className="flex items-start justify-center sm:justify-start gap-2">
                 <FaMapMarkerAlt className="mt-1" />
                 <span>72 New Hook Rd., Bayonne, NJ 07002</span>
@@ -74,8 +74,8 @@ export default function Footer() {
 
         {/* Social Media */}
         <div className="text-center md:text-left">
-          <h4 className="font-extrabold text-2xl mb-3">Let's Get Social</h4>
-          <p className="text-base mb-4">
+          <h4 className="font-extrabold text-lg mb-3">Let's Get Social</h4>
+          <p className="text-sm mb-4">
             Find inspiring recipes, see exciting updates and share your dishes
             with us!
           </p>
@@ -93,7 +93,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-pink-400 mt-10 pt-4 text-base font-semibold text-center md:text-left flex flex-col md:flex-row items-center justify-center gap-2">
+      <div className="border-t border-pink-400 mt-10 pt-4 text-sm font-semibold text-center md:text-left flex flex-col md:flex-row items-center justify-center gap-2">
         <a href="#" className="text-white no-underline hover:underline">
           Privacy Policy
         </a>
