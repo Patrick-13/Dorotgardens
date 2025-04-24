@@ -61,7 +61,7 @@ const Productcarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
+    <div className="elative min-h-screen flex flex-col sm:px-6 md:px-10 justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
       {/* Petals */}
       <img
         src="/images/pink-top-right.webp"
@@ -145,11 +145,11 @@ const Productcarousel = () => {
                       </div>
 
                       {/* Card */}
-                      <div className="relative z-10 bg-orchiddark text-white text-center p-4 pt-60 rounded-2xl shadow-lg w-72 sm:w-[18rem]">
+                      <div className="relative z-10 bg-orchiddark text-white text-center p-4 pt-60 rounded-2xl shadow-lg w-64 sm:w-[18rem] md:w-[20rem]">
                         <h3 className="text-xl font-bold mb-2">
                           {product.name}
                         </h3>
-                        <p className="text-sm leading-snug max-h-[7rem] overflow-y-auto">
+                        <p className="text-sm leading-snug max-h-[6rem] sm:max-h-[7rem] md:max-h-[8rem] overflow-y-auto">
                           {product.description}
                         </p>
                         <button
@@ -173,8 +173,8 @@ const Productcarousel = () => {
           })}
 
           {/* Swiper Navigation Buttons */}
-          <div className="swiper-button-prev !text-white !left-0 !z-50"></div>
-          <div className="swiper-button-next !text-white !right-0 !z-50"></div>
+          <div className="swiper-button-prev !text-white !left-2 sm:!left-4 !z-50"></div>
+          <div className="swiper-button-next !text-white !right-2 sm:!right-4 !z-50"></div>
         </Swiper>
       </div>
       {/* View All Products Button */}
