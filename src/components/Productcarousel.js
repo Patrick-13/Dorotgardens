@@ -149,7 +149,7 @@ const Productcarousel = () => {
                         <h3 className="text-xl font-bold mb-2">
                           {product.name}
                         </h3>
-                        <p className="text-sm leading-snug max-h-[6rem] sm:max-h-[7rem] md:max-h-[8rem] overflow-y-auto">
+                        <p className="text-sm leading-snug max-h-[6rem] sm:max-h-[8rem] md:max-h-[8rem] overflow-y-auto">
                           {product.description}
                         </p>
                         <button
