@@ -61,18 +61,18 @@ const Productcarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div className="elative min-h-screen flex flex-col sm:px-6 md:px-10 justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
+    <div className="relative min-h-screen flex flex-col sm:px-6 md:px-10 justify-center items-center text-center px-4 bg-[#ca95c2] overflow-hidden bg-cover bg-center sm:bg-top lg:bg-center">
       {/* Petals */}
       <img
         src="/images/pink-top-right.webp"
         alt="petals"
-        className="hidden lg:block absolute top-0 right-0 w-[30rem] opacity-80 pointer-events-none z-10"
+        className="hidden lg:block absolute top-0 right-0 w-[30rem] opacity-80 pointer-events-none"
       />
 
       <img
         src="/images/pink-bottom-left.webp"
         alt="petals"
-        className="hidden lg:block absolute bottom-[-1.5rem] left-0 w-[30rem] opacity-80 pointer-events-none z-10"
+        className="hidden lg:block absolute bottom-[-1.5rem] left-0 w-[30rem] opacity-80 pointer-events-none"
       />
 
       {/* Headlines */}
