@@ -1,9 +1,9 @@
+import { motion } from "framer-motion"
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageGrid from "../components/Imagegrids"
 import Aboutproductcarousel from "../components/Aboutproductcarousel"
-import { motion } from "framer-motion"
 
 export default function About() {
   const products = [
@@ -44,21 +44,49 @@ export default function About() {
 
           {/* Scrolling product bar */}
           <motion.div
-            className="absolute bottom-0 w-full flex gap-16 py-6 px-8"
-            animate={{ x: ["100%", "-100%"] }}
+            className="absolute bottom-0 flex w-[200%] gap-32 py-6 px-8"
+            animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
           >
-            {products.concat(products).map((product, index) => (
-              <img
-                key={index}
-                src={product.image}
-                alt={product.name}
-                className="h-28 object-contain transition-transform duration-300 hover:scale-110"
-              />
-            ))}
+            {/* Original Product Images */}
+            <div className="flex gap-32 w-full">
+              {products.map((product, index) => (
+                <motion.div
+                  key={`original-${index}`}
+                  whileHover={{ scale: 1.25 }} // Check if this is applied correctly
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="h-auto flex justify-center items-center relative z-10 cursor-pointer"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-contain h-auto max-h-28"
+                  />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Duplicate Product Images */}
+            <div className="flex gap-32 w-full">
+              {products.map((product, index) => (
+                <motion.div
+                  key={`duplicate-${index}`}
+                   whileHover={{ scale: 1.25 }} // Check if this is applied correctly
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="h-auto flex justify-center items-center relative z-10 cursor-pointer"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-contain h-auto max-h-28"
+                  />
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
+
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Top Left - Image */}

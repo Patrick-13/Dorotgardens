@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.product-image:hover {
+    transform: scale(1.25);
+  }
+  
