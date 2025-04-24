@@ -19,7 +19,7 @@ export default function About() {
   return (
     <Layout>
       <section>
-        <div className="relative h-screen text-white overflow-hidden">
+        <div className="relative min-h-screen sm:h-screen text-white">
           <img
             src="/images/mobile_banner.png"
             alt="Mobile Banner"
@@ -44,41 +44,41 @@ export default function About() {
 
           {/* Scrolling product bar */}
           <motion.div
-            className="absolute bottom-0 flex w-[200%] gap-32 py-6 px-8"
+            className="absolute bottom-0 flex w-[200%] gap-8 sm:gap-16 md:gap-32 py-4 px-2 sm:px-6 md:px-8"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
           >
             {/* Original Product Images */}
-            <div className="flex gap-32 w-full">
+            <div className="flex gap-8 sm:gap-16 md:gap-32 w-full">
               {products.map((product, index) => (
                 <motion.div
                   key={`original-${index}`}
-                  whileHover={{ scale: 1.25 }} // Check if this is applied correctly
+                  whileHover={{ scale: 1.25 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="h-auto flex justify-center items-center relative z-10 cursor-pointer"
+                  className="h-auto flex justify-center items-center relative z-10 cursor-pointer product-image"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="object-contain h-auto max-h-28"
+                    className="object-contain h-auto max-h-20 sm:max-h-24 md:max-h-28"
                   />
                 </motion.div>
               ))}
             </div>
 
             {/* Duplicate Product Images */}
-            <div className="flex gap-32 w-full">
+            <div className="flex gap-8 sm:gap-16 md:gap-32 w-full">
               {products.map((product, index) => (
                 <motion.div
-                  key={`duplicate-${index}`}
-                   whileHover={{ scale: 1.25 }} // Check if this is applied correctly
+                  key={`dupl-${index}`}
+                  whileHover={{ scale: 1.25 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="h-auto flex justify-center items-center relative z-10 cursor-pointer"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="object-contain h-auto max-h-28"
+                    className="object-contain h-auto max-h-20 sm:max-h-24 md:max-h-28"
                   />
                 </motion.div>
               ))}
